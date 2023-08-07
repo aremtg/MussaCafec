@@ -1,0 +1,381 @@
+@import "./config.css";
+
+/* main{
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/banner.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+/* Contenido de la izquierda */
+.content-2columnas{
+    display: flex;
+    /* display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; */
+}
+.izq{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+}
+.atajos {
+    font-family: "WorkSans-Medium";
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+}
+.icon-link {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px !important;
+    text-align: center;
+    font-size: 25px;
+}
+.atajos h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.atajos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.atajos li {
+    list-style: none;
+    padding: 0 8px;
+}
+.atajos li:hover {
+    background-color: rgb(233, 233, 233);
+}
+.atajos a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+}
+/* --------------------------------- */
+.recuerda{
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #38a90041;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+    font-family: "WorkSans-Medium";
+    height: max-content;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+}
+
+.recuerda-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.recuerda h1 {
+    font-size: 20px;
+    text-align: center;
+    font-family: "WorkSans-Medium";
+}
+
+.recuerda p {
+    font-family: "WorkSans-Italic";
+}
+.recuerda span {
+    color: rgb(255, 174, 0);
+    font-family: "WorkSans-Medium";
+}
+
+/* CONTENIDO DE LA DERECHA */
+.title-componentes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-componentes h1 {
+    font-family: "WorkSans-Medium";
+    color: rgb(0, 0, 0);
+}
+.componente,
+.componente2 {
+    width:calc(100% - auto);
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem 1rem 0 0;
+    background-color: #3cff008a;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+    cursor: pointer;
+    transition: all .7s ease-in-out;
+}
+.componente .title-comp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.icon-title {
+    transition: all .4s;
+}
+.componente h1 {
+    font-family: "WorkSans-Medium";
+}
+
+.componente p {
+    font-family: "WorkSans-Italic";
+    padding: 1rem;
+}
+
+.comp-titulo {
+    display: flex;
+    align-items: center;
+}
+
+.subcomponentes {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+    border-radius: 0 0 1rem 1rem;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.subcomponentes .sub {
+    width: 230px;
+    padding: .5rem;
+}
+
+.subcomponentes .sub .comp-titulo {
+    display: flex;
+    align-items: center;
+}
+
+.subcomponentes .sub .comp-titulo h1 {
+    font-family: "WorkSans-Medium";
+}
+
+.subcomponentes .sub .comp-titulo p {
+    font-size: 15px;
+    font-family: "WorkSans-Italic";
+}
+
+.icon {
+    width: 30px;
+}
+
+.componente2 h1 {
+    font-size: 1.6rem;
+    font-family: "WorkSans-Medium";
+}
+
+.componente2 p {
+    font-family: "WorkSans-Italic";
+}
+
+/* ESTILOS PARA EL APARTADO INFO Y NOTA */
+.info {
+    width: 87%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background: rgb(184, 151, 218);
+    clip-path: polygon(0% 0%, 95% 0, 100% 50%, 95% 100%, 0% 100%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all .5s;
+}
+
+.info:hover {
+    transform: scale(1.03);
+}
+
+.nota {
+    height: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.nota h1 {
+    font-size: 1.5rem;
+    font-family: "WorkSans-Medium";
+    color: var(--azulSena);
+    margin-top: 10px;
+}
+
+.nota p {
+    margin-top: 5px;
+    font-family: "WorkSans-Italic";
+}
+
+/* SECCION DE SEMILLEROS */
+
+.cont_semillero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-bottom: 10px;
+    list-style: none;
+}
+.title-semilleros {
+    width: 80%;
+    margin-left: auto;
+    padding: 1rem;
+    background: var(--azulSena);
+    clip-path: polygon(3% 0, 100% 0%, 100% 100%, 3% 100%, 0% 50%);
+    transition: all .5s;
+    margin-bottom: 10px;
+}
+
+.box-semillero {
+    background-color: #5eff0091;
+    position: relative;
+    display: block;
+    height: max-content;
+    border-radius: 1rem;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+}
+
+.semillero_img {
+    width: 250px;
+    height: auto;
+}
+.card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+.box-semillero:hover .card__overlay {
+    transform: translateY(0);
+}
+/* se esconde parte del header por la descripcion */
+.semillero_header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 2em;
+    background-color: rgb(255, 255, 255);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+}
+/* para que vuelva a subir todo el header */
+.box-semillero:hover .semillero_header{
+    transform: translateY(0);
+}
+.header_title {
+    font-size: 1rem;
+    margin: 0 0 .3em;
+    color: #000000;
+}
+.header_subtitle {
+    font-size: .8rem;
+    color: #082e00;
+}
+.semillero-descripcion {
+    padding: 0 1rem 2rem;
+    margin: 0;
+    color: #000000;
+    font-family: "WorkSans-Medium";
+    overflow: hidden;
+}
+/* --------------------------------------- */
+.title-semilleros:hover {
+    transform: translateX(-20px);
+}
+
+.title-semilleros h1 {
+    text-align: right;
+    font-size: 1.6rem;
+    font-family: "WorkSans-Medium";
+    color: var(--colorwhite);
+}
+
+/* SECCION PARA EL CRONOGRAMA */
+.title_cronograma {
+    width: 80%;
+    margin-right: auto;
+    padding: 1rem;
+    background: var(--azulSena);
+    margin-bottom: 10px;
+    clip-path: polygon(0% 0%, 97% 0, 100% 50%, 97% 100%, 0% 100%);
+    transition: all .5s;
+}
+
+.title_cronograma h1 {
+    font-size: 1.6rem;
+    font-family: "WorkSans-Medium";
+    color: var(--colorwhite);
+}
+
+.title_cronograma:hover {
+    transform: translateX(20px);
+}
+
+.icon_cronograma {
+    width: 15px;
+    height: 20px;
+    filter: invert(100%);
+}
+
+.cont_text {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(57, 169, 0);
+    background: linear-gradient(90deg, rgba(57, 169, 0, 1) 0%, rgba(57, 169, 0, 0.48082983193277307) 100%);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.img_cronograma1 img {
+    width: 350px;
+
+    border-radius: 0 20px 0 20px;
+}
+
+.text_cronograma h1 {
+    font-family: "WorkSans-Medium";
+    color: var(--azulSena);
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.text_cronograma ul li {
+    list-style: none;
+    display: flex;
+    align-content: center;
+    font-family: "WorkSans-Italic";
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.text_cronograma ul li:last-of-type {
+    width: 50%;
+}

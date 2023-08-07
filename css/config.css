@@ -1,0 +1,63 @@
+@font-face {
+    font-family:"WorkSans-ExtraBold";
+    src: url(../font/WorkSans-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family:"WorkSans-Italic";
+    src: url(../font/WorkSans-Italic.ttf);
+}
+
+@font-face {
+    font-family:"WorkSans-Medium";
+    src: url(../font/WorkSans-Medium.ttf);
+}
+
+:root{
+    --verdeSena:#39A900;
+    --azulSena:#00324D;
+    --colorwhite:rgb(255, 255, 255);
+    --fondopanel:#F5F5F5;
+    --colorAlerta:#01A6BD;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+
+    &::-webkit-scrollbar {
+        width: 13px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #ffffff;
+        border-radius: 180px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #39A900;
+        border-radius: 180px;
+    }
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 100px);
+    margin-left: 100px;
+    border-radius: 1rem 1rem 0 0;
+    height: 60px;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    transition: all .5s;
+}
+header.activeHeader ~ footer{
+    width: calc(100% - 290px);
+    margin-left: 290px;
+    transition: all .5s;
+}

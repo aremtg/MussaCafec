@@ -1,0 +1,240 @@
+@import "./config.css";
+/* BARRA DE NAVEGACION Y SUS DEPENDENCIA*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
+    padding: 6px 1rem;
+    height: 100%;
+    box-shadow: 5px 0 30px rgb(0, 0, 0, .1);
+    transition: all .5s;
+    z-index: 100000000000000000000;
+}
+header.activeHeader{
+    width: 240px;
+    transition: all .5s;
+   
+}
+.cabecera{
+    display: flex;
+    align-items: center;
+}
+.logos{    
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: all .5s;
+}
+header.activeHeader .cabecera .logos, header.activeHeader .cabecera .logos a {
+    transition: all .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+.logos img {
+    width: 50px;
+    margin-right:10px ;
+}
+.logos .separa-logos{
+    width: 4px;
+    height: 55px;
+    background-color: gray;
+    border-radius: 5px;
+}
+.logos a {
+    font-family: "WorkSans-ExtraBold";
+    font-size: 20px;
+    margin: 0 0 0 10px;
+    text-decoration: none;
+    color: var(--verdeSena);
+    pointer-events: none;
+}
+#btn{
+    position: absolute;
+    color: #38a900;
+    left: 45%;
+    top:6px;
+    font-size: 40px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translate(-40% , 4px);
+    cursor: pointer;
+    transition: all .5s;
+}
+header .buscador{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+.buscador input{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 50px);
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color:#38a900cb;
+    padding-left: 50px; 
+    font-size: 15px;
+    color:white;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+}
+.buscador .bx-search{
+    position: absolute;
+    z-index: 99;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+}
+.buscador .bx-search:hover{
+    color: #38a900cb;
+}
+.buscador .bx-search:hover ~ input{
+    background-color: white;
+}
+header i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px !important;
+    text-align: center;
+    font-size: 25px;
+}
+.nav{
+    margin-top: 20px;
+}
+.nav li{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    line-height: 50px;
+    cursor: pointer;
+}
+.nav li a{
+    color: rgb(156, 156, 156);
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 17px;
+    white-space: nowrap;
+
+    font-family:"WorkSans-Medium";
+    transition: all .5s;
+}
+.link_a, #icon-dropdown{
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s;
+}
+.nav li a:hover{
+    color: rgb(0, 17, 255);
+    background-color: rgb(235, 235, 235);
+}
+.nav li .tooltip{
+    position: absolute;
+    left: 240px;
+    top: 0;
+    transform: translate(-315%, 22%);
+    border-radius: 10px;
+    height: 33px;
+    width: 54px;
+    text-align: center;
+    line-height: 35px;
+    background-color: #ffffff;
+    font-size: 13px;
+    display: block;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s;
+}
+header.activeHeader .nav li .tooltip{
+    transform: translate(-315%, 22%);
+    transform: translate(44%, 22%);
+}
+.nav li:hover .tooltip{
+    opacity: 1;
+}
+.box-perfil{
+    position: absolute;
+    bottom: 5px;
+}
+.user-icon {
+    height: 50px;
+}
+/* Estilos para el enlace del botón del dropdown */
+#dropdown{
+    position: relative;
+}
+/* Estilos para el contenido del dropdown */
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 71px;
+    list-style: none;
+    background-color: #ffffff;
+    border: 1px solid #39a900;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 99;
+}
+header.activeHeader .nav #dropdown #dropdown-content{
+    left: 143px;
+}
+/* Mostrar el contenido del dropdown cuando se haga clic en el enlace */
+#dropdown-trigger:focus + #dropdown-content {
+    display: block;
+}
+#dropdown-content:focus + .tooltip{
+    opacity: 0;
+}
+/* Estilos para los enlaces del dropdown cuando se les pasa el mouse */
+#dropdown-content li a{
+    padding: 0px 5px;
+}
+#dropdown-content li a:hover {
+    border-radius: 0;
+}
+#icon-dropdown{
+    width: 15px;
+    height: 15px;
+    transition: all .7s;
+    margin-left: 7px;
+}
+.active-dropdown{
+    rotate: -90deg;
+}
+/* ------------------------ */
+header.activeHeader .cabecera #btn{
+    left: 85%;
+    transition: all .5s;
+}
+header.activeHeader a .link_a, header.activeHeader a #icon-dropdown{
+    opacity: 1;
+    transition: all .5s;
+}
+.content{
+    height: calc(100% - 60px);
+    margin-bottom: 60px;
+    width: calc(100% - 100px);
+    margin-left: 100px;
+    transition: all .5s;
+    padding: .3rem 0;
+    background-color: rgb(255, 255, 255);
+}
+.header.activeHeader ~ .content{
+    width: calc(100% - 290px);
+    margin-left: 290px;
+    transition: all .5s;
+}

@@ -1,0 +1,35 @@
+@import "./config.css";
+main{
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background-image: linear-gradient(to right, #b9f998, #adf488, #a0ef78, #93ea67, #85e555, #7ade49, #6fd83d, #63d12f, #59c726, #4fbd1c, #44b310, #39a900); }
+main img {
+    width: 500px;
+    aspect-ratio: 1/1;
+}
+.cont1{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    gap: .5rem;
+    align-items: center;
+}
+.cont1 .vision, .cont1 .mision{
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #fcfcfcb0;
+    box-shadow: 0.3em 0.3em 0.7em #00000015;
+}
+.titulo{
+    color:var(--azulSena);
+    font-family: "WorkSans-ExtraBold";
+}
+.text{
+    font-family:"WorkSans-Medium";
+    align-items: center;
+}
+/* ............. */
+
