@@ -1,16 +1,17 @@
 @import "./config.css";
 
-/* main{
+main{
     width: 100%;
     height: 400px;
     background-image: url(../img/banner.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-} */
+}
 /* Contenido de la izquierda */
 .content-2columnas{
     display: flex;
+    gap: .5rem;
     /* display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: 1fr;
@@ -22,7 +23,6 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    padding: 1rem;
 }
 .atajos {
     font-family: "WorkSans-Medium";
@@ -43,9 +43,9 @@
     font-size: 25px;
 }
 .atajos h1 {
+    padding: 5px 0;
     font-size: 20px;
     text-align: center;
-    margin-bottom: 10px;
 }
 .atajos ul {
     list-style: none;
@@ -55,6 +55,8 @@
 .atajos li {
     list-style: none;
     padding: 0 8px;
+    display: flex;
+    align-items: center;
 }
 .atajos li:hover {
     background-color: rgb(233, 233, 233);
@@ -102,10 +104,15 @@
 }
 
 /* CONTENIDO DE LA DERECHA */
+#componentes{
+    
+}
 .title-componentes {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #ffffff;
+    padding: 1rem;
 }
 .title-componentes h1 {
     font-family: "WorkSans-Medium";
@@ -113,15 +120,16 @@
 }
 .componente,
 .componente2 {
-    width:calc(100% - auto);
-    padding: .5rem;
     display: flex;
+    padding: 1rem;
     flex-direction: column;
-    border-radius: 1rem 1rem 0 0;
-    background-color: #3cff008a;
+    border-radius: 1rem 1rem 0 0 ;
     box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
     cursor: pointer;
     transition: all .7s ease-in-out;
+}
+.componente2{
+    border-radius: 1rem;
 }
 .componente .title-comp {
     width: 100%;
@@ -138,7 +146,6 @@
 
 .componente p {
     font-family: "WorkSans-Italic";
-    padding: 1rem;
 }
 
 .comp-titulo {
@@ -151,11 +158,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: white;
+    background-color: #38a900a9;
     box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
     border-radius: 0 0 1rem 1rem;
     overflow: hidden;
     margin-bottom: 10px;
+    font-family: "WorkSans-Medium";
 }
 .subcomponentes .sub {
     width: 230px;
@@ -169,6 +177,7 @@
 
 .subcomponentes .sub .comp-titulo h1 {
     font-family: "WorkSans-Medium";
+    color: #ffffff;
 }
 
 .subcomponentes .sub .comp-titulo p {

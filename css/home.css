@@ -3,23 +3,21 @@
 display: flex;
 align-items: center;
 }
-.left{
+.right{
     border-radius: 1rem;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: right;
     /* background-image: linear-gradient(to right, #b9f998, #adf488, #a0ef78, #93ea67, #85e555, #7ade49, #6fd83d, #63d12f, #59c726, #4fbd1c, #44b310, #39a900);  */
 }
-.left img {
-    width: 550px;
+.right img {
+    width: 450px;
     aspect-ratio: 1/1;
 }
-.right{
-    position: absolute;
-    top: 10px;
-    right: 50px;
+.left{
+
 }
-.right h1{
+.left h1{
     font-family: "WorkSans-ExtraBold";
     font-size: 5rem;
     text-decoration: none;

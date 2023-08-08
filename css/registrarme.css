@@ -1,0 +1,76 @@
+@import "./config.css";
+
+.form-registro {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+    font-family: "WorkSans-Medium";
+}
+
+.form-registro .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-registro .title h1 {
+    font-family: "WorkSans-ExtraBold";
+}
+
+.form-registro .btn_registrarme {
+    width: max-content;
+    padding: .5rem 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #38a900cb;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+    color: #fff;
+    font-size: 15px;
+
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn_registrarme:hover {
+    color: #39a900;
+    background-color: #fff;
+    transition: all .5s;
+}
+
+.form-registro .datos {
+    display: flex;
+    gap: 1rem;
+}
+.datos_personales, .datos_sena{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.datos_personales .control,
+.datos_sena .control{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.control input {
+    line-height: 35px;
+    border: none;
+    outline: none;
+    background-color: rgb(219, 219, 219);
+    text-indent: 10px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 18px;
+}
+.control #edad{
+    width: 50px;
+}

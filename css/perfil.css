@@ -1,0 +1,71 @@
+@import "./config.css";
+.content{
+    display: flex;
+}
+.profile-section {
+    flex: 1;
+    position: relative;
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  .cover-image {
+    background-image: linear-gradient(to top, #5af46e, #52e157, #4ace40, #42bb27, #39a900);
+    border-radius: 1rem 1rem .5rem .5rem;
+    height: 200px;
+  }
+  
+  .profile-picture {
+    position: relative;
+    bottom: -52%;
+    left: 1%;
+    background-color: #ccc;
+    border: 5px solid white;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-picture img{
+    width:150%;
+}
+  .profile-name {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "WorkSans-ExtraBold";
+  }
+  /* ------------ */
+  .info_destacada{
+    flex: 1;
+    background-color: white;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+    border-radius: 0 0 1rem 1rem;
+    padding: 20px;
+   
+  }
+  .info_destacada li{
+    list-style: none;
+    font-family: "WorkSans-Medium";
+  }
+  .info_destacada p{
+    font-family: "WorkSans-Medium";
+  }
+  .title{
+    font-family: "WorkSans-ExtraBold";
+  }
+  @media screen and (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-section {
+        width: 90%;
+    }
+    .info_destacada{
+        width: 90%;
+    }
+  }

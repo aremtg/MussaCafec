@@ -60,7 +60,7 @@
         </li>
     </ul>
     <div class="box-perfil">
-        <a href="<?=base_url?>">
+        <a href="<?=base_url?>perfil">
             <img class="user-icon" src="img/usuario.svg" alt="">
         </a>
         <span class="tooltip">Perfil</span>
