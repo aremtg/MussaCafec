@@ -32,7 +32,6 @@
                 </a>
             <ul id="dropdown-content">
                 <li><a href="<?=base_url?>informacion">Informacion</a></li>
-                <li><a href="<?=base_url?>semilleros">Semilleros</a></li>
                 <li><a href="<?=base_url?>registrarme">Registrarme</a></li>
             </ul>
             <span class="tooltip">Participa</span>

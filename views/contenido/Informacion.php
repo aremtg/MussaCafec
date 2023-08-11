@@ -1,10 +1,6 @@
 <link rel="stylesheet" href="./css/informacion.css">
 
-
 <section class="content">
-    <main>
-        
-    </main>
         <!-- CONTENIDO PARA LA PARTE IZQUIERDA DE LA INFORMACION -->
     <div class="content-2columnas">
         <div class="izq">

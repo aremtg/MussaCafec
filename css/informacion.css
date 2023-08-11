@@ -1,13 +1,4 @@
 @import "./config.css";
-
-main{
-    width: 100%;
-    height: 400px;
-    background-image: url(../img/banner.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
 /* Contenido de la izquierda */
 .content-2columnas{
     display: flex;
