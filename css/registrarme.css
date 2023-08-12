@@ -1,7 +1,43 @@
 @import "./config.css";
+.categorias_de_registros{
+    width: 95%;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+}
+.categorias_de_registros h1{
+    width: 100%;
+    font-family: "WorkSans-ExtraBold";
+    text-align: center;
+    padding: 10px 0;
+}
+.categorias_de_registros ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: .5rem;
+}
+.categorias_de_registros ul button{
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .01);
+    color: #000000;
+    font-size: 15px;
 
-.form-ponente {
-    width: 80%;
+    cursor: pointer;
+    transition: all .5s;
+}
+.categorias_de_registros ul button.active {
+   background-color: #39a900;
+   color: white;
+}
+form{
+    width:85%;
+    margin: 0 auto;
+    margin-top: 10px;
     display: flex;
     gap: 1rem;
     padding: 1rem;
@@ -10,70 +46,66 @@
     background-color: white;
     box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
     font-family: "WorkSans-Medium";
+    display: none;
 }
-
-.form-ponente .title {
+form .title {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.form-ponente .title h1 {
+form .title h2 {
     font-family: "WorkSans-ExtraBold";
 }
-
-.form-ponente .btn_registrarme {
-    width: max-content;
-    padding: .5rem 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-    background-color: #38a900cb;
-    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
-    color: #fff;
-    font-size: 15px;
-
-    cursor: pointer;
-    transition: all .5s;
+form .control{
+    width: 100%;
 }
-
-.btn_registrarme:hover {
-    color: #39a900;
-    background-color: #fff;
-    transition: all .5s;
-}
-
-.form-ponente .datos {
-    display: flex;
-    gap: 1rem;
-}
-.datos_personales, .datos_sena{
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-.datos_personales .control,
-.datos_sena .control{
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-}
-
-.control input {
+form .control input {
+    width: 100%;
     line-height: 30px;
     border: none;
     outline: none;
     background-color: rgb(238, 238, 238);
     text-indent: 10px;
-    border-radius: 10px;
-    width: 100%;
+    border-radius:0 10px 10px 0;
     font-size: 15px;
+    /* Otros estilos opcionales */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.control input:focus {
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 /* --------- */
+.control-select{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.control-select select {
+    width: 100%;
+    line-height: 30px;
+    border: none;
+    outline: none;
+    background-color:#38a90088;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    /* Otros estilos opcionales */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 4px;
+}
+.control-select select:focus {
+    color: black;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 .control_doble{
+    width: 100%;
     display: flex;
     gap: .5rem;
 }
@@ -89,12 +121,18 @@
     color: white;
     background-color: #38a900;
 }
-#ponentes-container{
+#ponentes-container-1,
+#ponentes-container-2,
+#ponentes-container-3,
+#ponentes-container-4{
     display: flex;
     gap: .5rem;
 }
-#ponentes-container .control{
-    background-color: #e0e0e0;
+.box_aclaracion{
+    width: 96%;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: rgba(255, 0, 0, 0.226) ;
 }
 .box-archivos_para_subir{
     display: flex;
@@ -103,4 +141,30 @@
 
 .box-archivos_para_subir div{
     background-color: #38a90060;
+}
+.box-archivos_para_subir div input{
+    border: none;
+    
+}
+form .btn_registrarme {
+    width: max-content;
+    padding: .5rem 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #38a900cb;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+    color: #fff;
+    font-size: 20px;
+
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn_registrarme:hover {
+    color: #39a900;
+    background-color: #fff;
+    transition: all .5s;
 }

@@ -28,3 +28,15 @@ btn.addEventListener("click", function() {
 buscador.addEventListener("click", function() {
     header.classList.toggle("activeHeader")
 });
+
+function showSubcomponent(subcomponentNumber) {
+    const subcomponents = document.querySelectorAll('.sub');
+    subcomponents.forEach(subcomponent => {
+        subcomponent.style.display = 'none';
+    });
+
+    const selectedSubcomponent = document.querySelectorAll('.sub')[subcomponentNumber - 1];
+    if (selectedSubcomponent) {
+        selectedSubcomponent.style.display = 'block';
+    }
+}

@@ -1,41 +1,27 @@
 @import "./config.css";
 /* Contenido de la izquierda */
-.content-2columnas{
-    display: flex;
-    gap: .5rem;
-    /* display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; */
+*{
+    font-family: "WorkSans-Medium";
 }
 .izq{
-    width: auto;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     gap: .5rem;
 }
 .atajos {
-    font-family: "WorkSans-Medium";
-    height: max-content;
+    width:35%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
     overflow: hidden;
     background-color: white;
     box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+    position: sticky;
 }
-.icon-link {
-    height: 50px;
-    min-width: 50px;
-    border-radius: 12px;
-    line-height: 50px !important;
-    text-align: center;
-    font-size: 25px;
-}
-.atajos h1 {
+.atajos h2 {
+    font-family: "WorkSans-ExtraBold";
     padding: 5px 0;
-    font-size: 20px;
     text-align: center;
 }
 .atajos ul {
@@ -57,8 +43,14 @@
     text-decoration: none;
     color: #000000;
 }
+.atajos ul li a span{
+    border-radius: 12px;
+    line-height: 50px !important;
+    font-size: 25px;
+}
 /* --------------------------------- */
 .recuerda{
+    flex: 1;
     border-radius: 1rem;
     padding: 1rem;
     background-color: #38a90041;
@@ -80,10 +72,10 @@
     align-items: center;
     margin-bottom: 10px;
 }
-.recuerda h1 {
-    font-size: 20px;
+.recuerda h2 {
+    font-family: "WorkSans-ExtraBold";
+    padding: 5px 0;
     text-align: center;
-    font-family: "WorkSans-Medium";
 }
 
 .recuerda p {
@@ -91,12 +83,29 @@
 }
 .recuerda span {
     color: rgb(255, 174, 0);
-    font-family: "WorkSans-Medium";
 }
 
-/* CONTENIDO DE LA DERECHA */
+/* COMPONENENTES */
 #componentes{
     
+}
+.buttons-subcomponentes{
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+}
+.buttons-subcomponentes button{
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #38a900cb;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
+    color: #fff;
+    font-size: 15px;
+
+    cursor: pointer;
+    transition: all .5s;
 }
 .title-componentes {
     display: flex;
@@ -106,7 +115,7 @@
     padding: 1rem;
 }
 .title-componentes h1 {
-    font-family: "WorkSans-Medium";
+    font-family: "WorkSans-ExtraBold";
     color: rgb(0, 0, 0);
 }
 .componente,
@@ -132,24 +141,21 @@
     transition: all .4s;
 }
 .componente h1 {
-    font-family: "WorkSans-Medium";
+    font-family: "WorkSans-ExtraBold";
 }
 
 .componente p {
     font-family: "WorkSans-Italic";
 }
 
-.comp-titulo {
+.sub-title {
+    font-family: "WorkSans-ExtraBold";
     display: flex;
     align-items: center;
 }
 
 .subcomponentes {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #38a900a9;
     box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
     border-radius: 0 0 1rem 1rem;
     overflow: hidden;
@@ -157,21 +163,18 @@
     font-family: "WorkSans-Medium";
 }
 .subcomponentes .sub {
-    width: 230px;
+    display: none;
     padding: .5rem;
 }
-
-.subcomponentes .sub .comp-titulo {
+.subcomponentes .sub .sub-title {
     display: flex;
     align-items: center;
 }
-
-.subcomponentes .sub .comp-titulo h1 {
-    font-family: "WorkSans-Medium";
-    color: #ffffff;
+.subcomponentes .sub .sub-title h1 {
+    padding-left: 5px;
 }
 
-.subcomponentes .sub .comp-titulo p {
+.subcomponentes .sub .sub-title p {
     font-size: 15px;
     font-family: "WorkSans-Italic";
 }
@@ -181,8 +184,7 @@
 }
 
 .componente2 h1 {
-    font-size: 1.6rem;
-    font-family: "WorkSans-Medium";
+    font-family: "WorkSans-ExtraBold";
 }
 
 .componente2 p {

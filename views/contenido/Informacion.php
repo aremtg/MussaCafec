@@ -1,21 +1,19 @@
 <link rel="stylesheet" href="./css/informacion.css">
 
 <section class="content">
-        <!-- CONTENIDO PARA LA PARTE IZQUIERDA DE LA INFORMACION -->
-    <div class="content-2columnas">
-        <div class="izq">
+<div class="izq">
             <div class="atajos">
-                <h1>Aqui vas a encontrar :</h1>
-                <div>
-                    <li><a href="#componentes"><i class='bx bxs-hand-right icon-link'></i>Componentes del evento</a></li>
-                    <li><a href="#semilleros"><i class='bx bxs-hand-right icon-link'></i>Semilleros de investigacion</a></li>
-                    <li><a href="#cronograma"><i class='bx bxs-hand-right icon-link'></i>Cronograma de evento</a></li>
-                </div>
+                <h2>Aqui vas a encontrar :</h2>
+                <ul>
+                    <li><a href="#componentes"><span>#</span>Componentes del evento</a></li>
+                    <li><a href="#semilleros"><span>#</span>Semilleros de investigacion</a></li>
+                    <li><a href="#cronograma"><span>#</span>Cronograma de evento</a></li>
+                </ul>
             </div>
             <div class="recuerda">
                 <div class="recuerda-title">
                     <img class="icon" src="./img/notification.png" alt="">
-                    <h1>Recuerda:</h1>
+                    <h2>Recuerda:</h2>
                 </div>
                 <p>El evento de desarrollo en dos (2) días <span>martes 17 de octubre  y miércoles 18 de octubre de
                     2023</span> desde las 6:00 am  para participantes como ponentes, posters, feria empsarial y concursantes
@@ -29,18 +27,28 @@
             <div class="title-componentes">
                 <h1> El evento cuenta con tres componentes para su VI Versión. </h1>
             </div>
-                <div class="componente">
+            <div class="componente">
                     <div class="title-comp">
-                        <img class="icon" src="./img/comprobado.png" alt="">
-                        <h1>Componente Academico</h1>
+                        <h1><span>1</span> Componente Académico</h1>
                     </div>
                     <p>Es un medio de divulgación de proyectos orientados a temáticas de investigación, 
-                    innovación y desarrollo tecnológico ligado a alguno de los ejes temáticos establecidos como: </p>
+                    innovación y desarrollo tecnológico ligado a alguno de los ejes temáticos establecidos como:</p>
                 </div>
+                <!-- Botones para cambiar entre subcomponentes -->
+                <div class="buttons-subcomponentes">
+                    <button class="button" onclick="showSubcomponent(1)">Empresarial</button>
+                    <button class="button" onclick="showSubcomponent(2)">Agroindustrial</button>
+                    <button class="button" onclick="showSubcomponent(3)">Agropecuario</button>
+                    <button class="button" onclick="showSubcomponent(4)">Energías Renovables</button>
+                    <button class="button" onclick="showSubcomponent(5)">Protección al Medio Ambiente</button>
+                    <button class="button" onclick="showSubcomponent(6)">Arquitectura y Construcciones Sostenibles</button>
+                    <!-- Agrega botones para los demás subcomponentes aquí -->
+                </div>
+                
                 <!-- SUBCOMPONENTES  -->
                 <div class="subcomponentes">
                     <div class="sub">
-                        <div class="comp-titulo">
+                        <div class="sub-title">
                             <img class="icon" src="./img/empresa.png" alt="">
                             <h1>Empresarial:</h1>
                         </div>
@@ -51,7 +59,7 @@
                         </p>
                 </div>
                 <div class="sub">
-                    <div class="comp-titulo">
+                    <div class="sub-title">
                         <img class="icon" src="./img/agronomia.png" alt="">
                         <h1>Agroindustrial:</h1>
                     </div>
@@ -62,7 +70,7 @@
                     </p>
                 </div>
                 <div class="sub">
-                    <div class="comp-titulo">
+                    <div class="sub-title">
                         <img class="icon" src="./img/agricultura.png" alt="">
                         <h1>Agropecuario:</h1>
                     </div>
@@ -72,7 +80,7 @@
                     </p>
                 </div>
                 <div class="sub">
-                    <div class="comp-titulo">
+                    <div class="sub-title">
                         <img class="icon" src="./img/energia-renovable.png" alt="">
                         <h1>Energías Renovables:</h1>
                     </div>
@@ -84,7 +92,7 @@
                     </p>
                 </div>
                 <div class="sub">
-                    <div class="comp-titulo">
+                    <div class="sub-title">
                         <img class="icon" src="./img/proteccion-ambiental.png" alt="">
                         <h1>Protección al Medio Ambiente:</h1>
                     </div>
@@ -95,7 +103,7 @@
                     </p>
                 </div>
                 <div class="sub">
-                    <div class="comp-titulo">
+                    <div class="sub-title">
                         <img class="icon" src="./img/architect.png" alt="">
                         <h1>Arquitectura y Construcciones Sostenibles:</h1>
                     </div>
@@ -111,8 +119,7 @@
             <!-- COMPONENTES DOS Y TRES  -->
             <div class="componente2">
                 <div class="title-comp">
-                    <img class="icon" src="./img/comprobado.png" alt="">
-                    <h1>Componentes Feria empsarial: </h1>
+                    <h1><span>2</span> Componentes Feria empsarial: </h1>
                 </div>
                 <p>Un espació que reúne en un mismo lugar a
                 empndedores, estudiantes y apndices con el propósito de visibilizar sus
@@ -122,8 +129,7 @@
             </div>
             <div class="componente2">
                 <div class="title-comp">
-                    <img class="icon" src="./img/comprobado.png" alt="">
-                    <h1>Componente de robótica: </h1>
+                    <h1><span>3</span> Componente de robótica: </h1>
                 </div>
                 <p>Se llevará a cabo el primer torneo de robótica en la Regional 
                     Casanare, con el objetivo de reunir a diversas instituciones 
@@ -135,12 +141,11 @@
                     habrá un espacio de capacitación para instructores y docentes 
                     relacionado con el uso y manejo de la tecnología LEGO Education.</p>
             </div>
-        </div>
-    </div>   
+        </div> 
     <!-- SECCION DE LA NOTA -->
     <section class="info">
     <div class="nota">
-            <div class="comp-titulo">
+            <div class="sub-title">
                 <img class="icon" src="./img/notepad.png" alt="">
                 <h1>Para tener en cuenta:</h1>
             </div>
